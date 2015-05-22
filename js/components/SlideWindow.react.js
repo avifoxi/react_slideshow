@@ -1,5 +1,7 @@
 var React = require('react');
 var SlideShowActions = require('../actions/SlideShowActions');
+var SlidesStore = require('../stores/SlidesStore');
+
 
 var SlideWindow = React.createClass({
 	render: function(){
@@ -7,10 +9,19 @@ var SlideWindow = React.createClass({
 		// console.log(this.props);
 		return (
 			<div className="i-have-the-fluex">
-				<h2>{this.props.selected.title}</h2>
-				<img src={ this.props.selected.image } />
+				<h2>{this.state.selected.title}</h2>
+				<img src={ this.state.selected.image } />
 			</div>
 		);
+	},
+	getInitialState: function(){
+		return this.updateState();
+	}, 
+	updateState: function(){
+		return {
+			title: SlidesStore.getSelected().title,
+			image: SlidesStore.getSelected().image
+		}
 	}
 
 });

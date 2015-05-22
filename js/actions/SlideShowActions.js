@@ -14,19 +14,20 @@ var SlideShowActions = {
 	},
 
 	nextSlide: function(){
-		AppDispatcher.handleViewAction({
+		console.log('inside actions,. is go?');
+		AppDispatcher.handleAction({
 			actionType: SlideShowConstants.NEXT_SLIDE,
-			data: 'bar'
+			data: 'next'
 		})
 	},
 	prevSlide: function(){
-		AppDispatcher.handleViewAction({
+		AppDispatcher.handleAction({
 			actionType: SlideShowConstants.PREV_SLIDE,
 			data: 'bar'
 		})
 	}, 
 	setSlide: function(index){
-		AppDispatcher.handleViewAction({
+		AppDispatcher.handleAction({
 			actionType: SlideShowConstants.SET_SLIDE,
 			data: index
 		})

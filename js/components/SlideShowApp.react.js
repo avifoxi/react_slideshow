@@ -1,7 +1,7 @@
 var React = require('react');
 var SlidesStore = require('../stores/SlidesStore');
 var SlideWindow = require('./SlideWindow.react');
-// var SlideNav = require('./SlideNav.react');
+var SlideNav = require('./SlideNav.react');
 
 function getSlideShowState(){
 	return {
@@ -16,16 +16,19 @@ var SlideShowApp = React.createClass({
 		return getSlideShowState();
 	},
 	componentDidMount: function(){
-		SlidesStore.addChangeListener(this._onChange);
+		var self = this;
+		SlidesStore.addChangeListener(self._onChange);
+		// SlideWindow.addChangeListener(this._one)
 	},
 	_onChange: function(){
+		// console.log('in parent element, register change');
 		this.setState(getSlideShowState());
 	},
 	render: function(){
 		return (
 			<div className="slide-show-app jumbotron">
 				<SlideWindow selected={this.state.selectedSlide} />
-				
+				<SlideNav />
 			</div>
 		);
 	}
