@@ -23,11 +23,12 @@ var SlideShowApp = React.createClass({
 	_onChange: function(){
 		// console.log('in parent element, register change');
 		this.setState(getSlideShowState());
+		console.log(this.state.selectedSlide.image);
 	},
 	render: function(){
 		return (
 			<div className="slide-show-app jumbotron">
-				<SlideWindow selected={this.state.selectedSlide} />
+				<SlideWindow title={this.state.selectedSlide.title} image={this.state.selectedSlide.image} />
 				<SlideNav />
 			</div>
 		);

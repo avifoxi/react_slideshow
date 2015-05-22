@@ -17,12 +17,16 @@ function setSelected(index){
 }
 
 function nextSlide(){
-	// console.log('inside SlidesStore');
 	if (_currentIndex < _length - 1){
-		// console.log('inside if statemtnet puls index');
-		
-		_selected = _slides[_currentIndex++];
-		// console.log(_currentIndex);
+		_currentIndex++
+		_selected = _slides[_currentIndex];
+	}
+}
+
+function lastSlide(){
+	if (_currentIndex > 0 ){
+		_currentIndex--
+		_selected = _slides[_currentIndex];
 	}
 }
 
@@ -62,8 +66,12 @@ AppDispatcher.register(function(payload){
 			setSelected(action.data);
 			break
 		case SlideShowConstants.NEXT_SLIDE:
-			console.log('in SlidesStore dispatch registration')
+			// console.log('in SlidesStore dispatch registration')
 			nextSlide();
+			break
+		case SlideShowConstants.PREV_SLIDE:
+			// console.log('in SlidesStore dispatch registration')
+			lastSlide();
 			break
 		default:
 			return true;

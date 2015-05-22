@@ -39,7 +39,7 @@ module.exports= {
 			},
 			{
 				title: faker.company.catchPhrase(),
-				image: faker.image.cats(),
+				image: faker.image.avatar(),
 				points: [
 					faker.lorem.sentence(),
 					faker.lorem.sentence()
@@ -47,7 +47,7 @@ module.exports= {
 			},
 			{
 				title: faker.company.catchPhrase(),
-				image: faker.image.cats(),
+				image: faker.image.city(),
 				points: [
 					faker.lorem.sentence(),
 					faker.lorem.sentence()
@@ -55,7 +55,7 @@ module.exports= {
 			},
 			{
 				title: faker.company.catchPhrase(),
-				image: faker.image.cats(),
+				image: faker.image.food(),
 				points: [
 					faker.lorem.sentence(),
 					faker.lorem.sentence()

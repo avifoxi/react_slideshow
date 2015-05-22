@@ -3,8 +3,6 @@ var SlideShowActions = require('../actions/SlideShowActions');
 
 var SlideNav = React.createClass({
 	render: function(){
-		// console.log('print props in SlideWindow');
-		// console.log(this.props);
 		return (
 			<nav>
 				<button onClick={this.backASlide} >back</button>
@@ -13,11 +11,9 @@ var SlideNav = React.createClass({
 		);
 	}, 
 	backASlide: function(){
-		console.log('backASlide');
-		// SlideShowActions.ne;
+		SlideShowActions.prevSlide();
 	},
 	forwardASlide: function(){
-		console.log('forwardASlide');
 		SlideShowActions.nextSlide();
 	}
 

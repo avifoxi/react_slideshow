@@ -9,20 +9,21 @@ var SlideWindow = React.createClass({
 		// console.log(this.props);
 		return (
 			<div className="i-have-the-fluex">
-				<h2>{this.state.selected.title}</h2>
-				<img src={ this.state.selected.image } />
+				<h2>{this.props.title}</h2>
+				<img src={ this.props.image } />
 			</div>
 		);
-	},
-	getInitialState: function(){
-		return this.updateState();
-	}, 
-	updateState: function(){
-		return {
-			title: SlidesStore.getSelected().title,
-			image: SlidesStore.getSelected().image
-		}
 	}
+	// ,
+	// getInitialState: function(){
+	// 	return this.updateState();
+	// }, 
+	// updateState: function(){
+	// 	return {
+	// 		title: SlidesStore.getSelected().title,
+	// 		image: SlidesStore.getSelected().image
+	// 	}
+	// }
 
 });
 

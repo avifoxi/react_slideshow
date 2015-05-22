@@ -23,7 +23,7 @@ var SlideShowActions = {
 	prevSlide: function(){
 		AppDispatcher.handleAction({
 			actionType: SlideShowConstants.PREV_SLIDE,
-			data: 'bar'
+			data: 'last'
 		})
 	}, 
 	setSlide: function(index){
