@@ -20,8 +20,8 @@ FauxServerAPI.getSlidesData();
 React.render(<SlideShowApp />, document.getElementById('slideShow-app'));
 // console.log(localStorage.getItem('slides'));
 
-// module.exports.faker = faker = require('faker');
+module.exports.faker = faker = require('faker');
 // module.exports.appDispatcher = appDispatcher = require('./dispatcher/AppDispatcher');
 
 // console.log('post dispatcher call?');
-window.slide_show_actions = SlideShowActions;
+// window.slide_show_actions = SlideShowActions;

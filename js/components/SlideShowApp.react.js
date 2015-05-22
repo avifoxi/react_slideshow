@@ -29,7 +29,7 @@ var SlideShowApp = React.createClass({
 		return (
 			<div className="slide-show-app jumbotron">
 				<SlideWindow title={this.state.selectedSlide.title} image={this.state.selectedSlide.image} />
-				<SlideNav />
+				<SlideNav length={this.state.length}  />
 			</div>
 		);
 	}

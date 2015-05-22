@@ -14,17 +14,6 @@ var SlideWindow = React.createClass({
 			</div>
 		);
 	}
-	// ,
-	// getInitialState: function(){
-	// 	return this.updateState();
-	// }, 
-	// updateState: function(){
-	// 	return {
-	// 		title: SlidesStore.getSelected().title,
-	// 		image: SlidesStore.getSelected().image
-	// 	}
-	// }
-
 });
 
 module.exports = SlideWindow;
